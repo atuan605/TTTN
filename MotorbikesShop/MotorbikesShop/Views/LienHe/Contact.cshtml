@@ -1,0 +1,341 @@
+﻿@{
+    ViewBag.Title = "Liên hệ - Motorbike Memes";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+<h2></h2>
+<!-- banner -->
+<div class="ban-top">
+    <div class="container">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item"><a class="menu__link" href="@Url.Action("Index","SanPhams")">TRANG CHỦ <span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item menu__item--current"><a class="menu__link" href="@Url.Action("About","GioiThieu")">GIỚI THIỆU</a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM<span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="#"><img src="~/Content/images/logo.jpg" alt=" " /></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("XeMay","SanPhams")">SẢN PHẨM MEMES</a></li>
+                                                <li><a href="@Url.Action("DieuLeBaoHanh","DichVu")">ĐIỀU LỆ BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("GiaHanBaoHanh","DichVu")">GIA HẠN BẢO HÀNH</a></li>
+                                                <li><a href="@Url.Action("ThoiHanBaoHanh","DichVu")">THỜI HẠN BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">MEMES<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a href="@Url.Action("TuyenDung","TuyenDung")">TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
+                                </ul>
+                            </li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="display" value="1">
+                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //banner-top -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG NHẬP</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Mật khẩu" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng nhập">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal2">Bạn chưa có tài khoản, đăng ký tại đây</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- //Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG Ký</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="Email" required="">
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="password" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Confirm Password" required="">
+                            <label>Nhập lại mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng ký">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#">Tôi đã đông ý các điều khoản - Nhấp vào đăng ký</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- /banner_bottom_agile_info -->
+<div class="page-head_agile_info_w3l">
+    <div class="container">
+        <h3>LIÊN HỆ VỚI MEMES</span></h3>
+        <!--/w3_short-->
+        <div class="services-breadcrumb">
+            <div class="agile_inner_breadcrumb">
+
+                <ul class="w3_short">
+                    <li><a href="@Url.Action("Index","SanPhams")">TRANG CHỦ</a><i>|</i></li>
+                    <li>LIÊN HỆ</li>
+                </ul>
+            </div>
+        </div>
+        <!--//w3_short-->
+    </div>
+</div>
+<!--/contact-->
+<div class="banner_bottom_agile_info">
+    <div class="container">
+        <div class="contact-grid-agile-w3s">
+            <div class="col-md-4 contact-grid-agile-w3">
+                <div class="contact-grid-agile-w31">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <h4>ĐỊA CHỈ</h4>
+                    <p>97 Man Thiện, Phường Tăng Nhơn Phú A, Quận 9, Hồ Chí Minh.</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid-agile-w3">
+                <div class="contact-grid-agile-w32">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <h4>HOTLINE</h4>
+                    <p>01657466553<span>0944262794</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid-agile-w3">
+                <div class="contact-grid-agile-w33">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <h4>EMAIL</h4>
+
+                    <p><a href="mailto:n14dccn086@student.ptithcm.edu.vn">atuan.060596@gmail.com</a><span><a href="mailto:n14dccn086@student.ptithcm.edu.vn">info@memes.com</a></span></p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div class="contact-w3-agile1 map" data-aos="flip-right">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.522324040253!2d106.78381231457232!3d10.84782046083869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276bb276eaf7%3A0x56a6a0eafe0e3b09!2zOTcgTWFuIFRoaeG7h24sIEhp4buHcCBQaMO6LCBRdeG6rW4gOSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1531493366165" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="banner_bottom_agile_info">
+    <div class="container">
+        <div class="agile-contact-grids">
+            <div class="agile-contact-left">
+                <div class="col-md-6 address-grid">
+                    <h4>THÔNG TIN LIÊN HỆ</span></h4>
+                    <div class="mail-agileits-w3layouts">
+                        <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                        <div class="contact-right">
+                            <p>CSKH</p><span>1900 8198</span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="mail-agileits-w3layouts">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <div class="contact-right">
+                            <p>MAIL</p><a href="mailto:n14dccn086@student.ptithcm.edu.vn">atuan.060596@gmail.com</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="mail-agileits-w3layouts">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <div class="contact-right">
+                            <p>VỊ TRÍ</p><span>11 Nguyễn Đình Chiểu, Đa Kao, Quận 1, Hồ Chí Minh</span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <ul class="social-nav model-3d-0 footer-social w3_agile_social two contact">
+                        <li class="share">THEO DÕI</li>
+                        <li>
+                            <a href="https://www.facebook.com/tatuan36" class="facebook">
+                                <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/trinh_anh_tuan_/" class="instagram">
+                                <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCSHsNlvVJVIy9r8YlchPoGw?view_as=subscriber" class="youtube">
+                                <div class="front"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 contact-form">
+                    <h4 class="white-w3ls">Mẫu thông tin liên hệ</span></h4>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Name" required="">
+                            <label>Họ tên</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="Email" required="">
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="text" name="Subject" required="">
+                            <label>Chủ đề</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <textarea name="Message" required=""></textarea>
+                            <label>Nội dung</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="GỬI">
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//contact-->
+<!--/grids-->
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                    <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                    <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                    <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>
+<!--grids-->

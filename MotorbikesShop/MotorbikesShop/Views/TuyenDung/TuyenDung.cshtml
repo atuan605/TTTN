@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Tuyển dụng - Motorbike Memes";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+<h2></h2>
+<!-- banner -->
+<div class="ban-top">
+    <div class="container">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="@Url.Action("Index","SanPhams")">TRANG CHỦ<span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("About","GioiThieu")">GIỚI THIỆU</a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM<span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="#"><img src="~/Content/images/logo.jpg" alt=" " /></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("XeMay","SanPhams")">SẢN PHẨM MEMES</a></li>
+                                                <li><a href="@Url.Action("DieuLeBaoHanh","DichVu")">ĐIỀU LỆ BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("GiaHanBaoHanh","DichVu")">GIA HẠN BẢO HÀNH</a></li>
+                                                <li><a href="@Url.Action("ThoiHanBaoHanh","DichVu")">THỜI HẠN BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">MEMES<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a href="@Url.Action("TuyenDung","TuyenDung")">TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
+                                </ul>
+                            </li>
+                            <li class=" menu__item"><a class="menu__link" href="#">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="display" value="1">
+                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //banner-top -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG NHẬP</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Mật khẩu" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng nhập">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal2">Bạn chưa có tài khoản, đăng ký tại đây</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- //Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG Ký</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="Email" required="">
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="password" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Confirm Password" required="">
+                            <label>Nhập lại mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng ký">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#">Tôi đã đông ý các điều khoản - Nhấp vào đăng ký</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- banner -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <img src="~/Content/images/tuyendung.jpg" width="1520" height="550" alt=" " />
+</div>
+<div class="clearfix"></div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">THÔNG ĐIỆP TUYỂN DỤNG</h3>
+        <p>
+            <strong>Nồng nhiệt chào đón bạn ghé thăm Website của Công ty Yamaha Motor Việt Nam và ghé thăm trang tuyển dụng của chúng tôi!</strong><br /><br />
+            Từ khi thành lập công ty Memes Việt Nam (MVN) đến nay đã được gần 30 năm và cùng với chặng đường phát triển của công ty, số lượng cán bộ công nhân viên làm việc tại MVN đã tăng lên không ngừng, từ 100 lên 200, từ 1000 lên 2000 … Và hiện tại, chúng tôi có 10.000 cán bộ công nhân viên tại cả 3 miền đất nước đang làm việc hết mình cho thương hiệu Memes tại Việt Nam.<br /><br />
+            Bạn hãy dành thời gian tìm hiểu Chính sách tuyển dụng của chúng tôi, qua đó bạn biết được định hướng của chúng tôi trong công tác chiêu mộ nhân tài cũng như các tiêu chí chung nhất mà Memes mong đợi ở các ứng viên của mình. Bạn cũng đừng bỏ qua cơ hội tìm hiểu về môi trường làm việc, văn hóa con người và chế độ chính sách… của Yamaha được khắc họa phần nào qua nội dung giới thiệu về công ty cũng như Thư viện ảnh minh họa.<br /><br />
+            Nếu bạn thấy bản thân mình phù hợp với các tiêu chí của chúng tôi, bạn cảm thấy được thôi thúc gia nhập vào đại gia đình của Memes, bạn đừng ngần ngại tham gia ứng tuyển! Chúng ta sẽ có cơ hội được cùng nhau đam mê sáng tạo, trải nghiệm những giá trị khác biệt, với mục đích cuối cùng là làm cho cuộc sống thêm tươi đẹp! Một lần nữa, rất cảm ơn bạn đã ghé thăm trang tuyển dụng của phòng Nhân sự chúng tôi và hy vọng trong tương lai gần, bạn cũng sẽ là một thành viên trong đại gia đình Memes.<br /><br />
+            <strong>Chị Akali Deo</strong><br />
+            Giám đốc bộ phận hành chính nhân sự.
+
+        </p>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">CHÍNH SÁCH TUYỂN DỤNG</h3>
+        <p>
+            Công ty tin rằng bằng một chính sách tuyển dụng đúng đắn, công ty sẽ thu hút và khơi dậy được đam mê gia nhập đại gia đình Memes của những ứng viên năng động, tài đức ở khắp mọi nơi. Mọi thông tin tuyển dụng của Công ty đều được công bố rộng rãi và đảm bảo cơ hội bình đẳng cho tất cả các thí sinh.
+        </p>
+        <img src="~/Content/images/chinhsach.jpg" width="1100" height="550" alt=" " />
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">QUY TRÌNH TUYỂN DỤNG</h3>
+        <img src="~/Content/images/quytrinh.jpg" width="1100" height="300" alt=" " />
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">CƠ HỘI VIỆC LÀM</h3>
+        <img src="~/Content/images/td.jpg" width="1100" height="300" alt=" " />
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                    <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                    <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                    <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,322 @@
+﻿@using MotorbikesShop.Models;
+@model IEnumerable<MotorbikesShop.Models.SanPham>
+
+
+@{
+    ViewBag.Title = "XeMay";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+<h2></h2>
+<!-- banner -->
+<div class="ban-top">
+    <div class="container">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="@Url.Action("Index","SanPhams")">TRANG CHỦ<span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("About","GioiThieu")">GIỚI THIỆU</a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM<span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="#"><img src="~/Content/images/logo.jpg" alt=" " /></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("XeMay","SanPhams")">SẢN PHẨM MEMES</a></li>
+                                                <li><a href="@Url.Action("DieuLeBaoHanh","DichVu")">ĐIỀU LỆ BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("GiaHanBaoHanh","DichVu")">GIA HẠN BẢO HÀNH</a></li>
+                                                <li><a href="@Url.Action("ThoiHanBaoHanh","DichVu")">THỜI HẠN BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">MEMES<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a href="@Url.Action("TuyenDung","TuyenDung")">TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
+                                </ul>
+                            </li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="display" value="1">
+                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //banner-top -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG NHẬP</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Mật khẩu" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng nhập">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal2">Bạn chưa có tài khoản, đăng ký tại đây</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- //Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1">
+                    <h3 class="agileinfo_sign">ĐĂNG Ký</h3>
+                    <form action="#" method="post">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Tài khoản" required="">
+                            <label>Tài khoản</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="Email" required="">
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="password" required="">
+                            <label>Mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="password" name="Confirm Password" required="">
+                            <label>Nhập lại mật khẩu</label>
+                            <span></span>
+                        </div>
+                        <input type="submit" value="Đăng ký">
+                    </form>
+
+                    <div class="clearfix"></div>
+                    <p><a href="#">Tôi đã đông ý các điều khoản - Nhấp vào đăng ký</a></p>
+
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+</div>
+<!-- /banner_bottom_agile_info -->
+<div class="page-head_agile_info_w3l">
+    <div class="container">
+        <h3>SẢN PHẨM CỦA MEMES</h3>
+        <!--/w3_short-->
+        <div class="services-breadcrumb">
+            <div class="agile_inner_breadcrumb">
+
+                <ul class="w3_short">
+                    <li><a href="@Url.Action("Index","SanPhams")">TRANG CHỦ</a><i>|</i></li>
+                    <li>SẢN PHẨM</li>
+                </ul>
+            </div>
+        </div>
+        <!--//w3_short-->
+    </div>
+</div>
+
+<!-- banner-bootom-w3-agileits -->
+<div class="banner-bootom-w3-agileits">
+    <div class="container">
+        <!-- mens -->
+        <div class="col-md-4 products-left">
+            <div class="css-treeview">
+                <h4>SẢN PHẨM</h4>
+                <ul class="tree-list-pad">
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-motorcycle" aria-hidden="true"></i><a href="@Url.Action("XeSo","SanPhams")">XE SỐ</a></label></li>
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-motorcycle" aria-hidden="true"></i><a href="@Url.Action("XeTayGa","SanPhams")">XE TAY GA</a></label></li>
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-motorcycle" aria-hidden="true"></i><a href="@Url.Action("XeTayCon","SanPhams")">XE TAY CÔN</a></label></li>
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-motorcycle" aria-hidden="true"></i><a href="@Url.Action("XeMoTo","SanPhams")">XE MÔ TÔ</a></label></li>
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-suitcase" aria-hidden="true"></i><a href="@Url.Action("PhuKien","SanPhams")">PHỤ KIỆN</a></label></li>
+                    <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-cog" aria-hidden="true"></i><a href="@Url.Action("PhuTung","SanPhams")">PHỤ TÙNG</a></label></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+
+        @*<div class="sort-grid">
+                <div class="sorting">
+                    <h6>Sắp xếp theo</h6>
+                    <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                        <option value="null">Mặc định</option>
+                        <option value="null">Theo tên(A - Z)</option>
+                        <option value="null">The tên(Z - A)</option>
+                        <option value="null">Theo giá(Thấp - Cao)</option>
+                        <option value="null">Theo giá(Cao - Thấp)</option>
+                    </select>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="sorting">
+                    <h6>Hiển thị</h6>
+                    <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
+                        <option value="null">12</option>
+                        <option value="null">24</option>
+                    </select>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>*@
+        <div class="men-wear-bottom">
+            <div class="col-sm-4 men-wear-left">
+                <img class="img-responsive" src="~/Content/images/sanpham1.jpg" alt=" " />
+            </div>
+            <div class="col-sm-8 men-wear-right">
+                <p>
+                    Sự thành công của Honda Việt Nam hôm nay là quá trình phát triển lâu dài và bền vững dựa vào 3 triết lý: Niềm tin cơ bản, Tôn chỉ Công ty và Chính sách quản lý. Các triết lý này không chỉ được chia sẻ bởi toàn thể các nhân viên mà còn tạo nên nền tảng cho tất cả các hoạt động của Công ty và thiết lập các tiêu chuẩn cho việc thực hiện và ra quyết định của tất cả các nhân viên trong Tập đoàn Memes
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="single-pro">
+            @foreach (var item in Model)
+            {
+                if (item.MaNhom == 3)
+                {
+                    <div class="col-md-3 product-men">
+                        <div class="men-pro-item simpleCart_shelfItem">
+                            <div class="men-thumb-item">
+                                <img src="@Url.Content(item.HinhAnh)" alt="" class="pro-image-front">
+                                <img src="@Url.Content(item.HinhAnh)" alt="" class="pro-image-back">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="#" class="link-product-add-cart">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product ">
+                                <h4><a href="#">@item.TenSP</a></h4>
+                                <div class="info-product-price">
+                                    <span class="item_price"> Giá từ @item.GiaBan VNĐ</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+
+
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <!-- //mens -->
+    <!--/grids-->
+    <!--/grids-->
+    <div class="coupons">
+        <div class="coupons-grids text-center">
+            <div class="w3layouts_mail_grid">
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                        <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                        <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                        <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-gift" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                        <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+    </div>
+    <!--grids-->
+
+
+
