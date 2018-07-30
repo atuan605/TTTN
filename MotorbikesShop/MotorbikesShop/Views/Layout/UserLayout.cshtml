@@ -26,12 +26,7 @@
 <body>
     <div class="header" id="home">
         <div class="container">
-            <ul>
-                <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> ĐĂNG NHẬP </a></li>
-                <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ĐĂNG KÝ </a></li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>01657466553</li>
-                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:n14dccn086@student.ptithcm.edu.vn">atuan.060596@gmail.com</a></li>
-            </ul>
+            @Html.Partial("~/Views/SanPhams/LoginPartial.cshtml")
         </div>
     </div>
     <!-- //header -->
@@ -39,7 +34,7 @@
     <div class="header-bot">
         <div class="header-bot_inner_wthreeinfo_header_mid">
             <div class="col-md-4 header-middle">
-                <form action="#" method="post">
+                <form action="/TimKiem/KetQuaTimKiem" method="post">
                     <input type="search" name="search" placeholder="Nhập từ khóa..." required="">
                     <input type="submit" value=" ">
                     <div class="clearfix"></div>
@@ -79,7 +74,7 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    <!-- //header-bot -->z
+    <!-- //header-bot -->
     @RenderBody()
     <!-- footer -->
     <div class="footer">

@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "Công nghệ - Motorbike Memes";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+<h2></h2>
+<!-- banner -->
+<div class="ban-top">
+    <div class="container">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="@Url.Action("Index","SanPhams")">TRANG CHỦ<span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("About","GioiThieu")">GIỚI THIỆU</a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM<span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="#"><img src="~/Content/images/logo.jpg" alt=" " /></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("XeMay","SanPhams")">SẢN PHẨM MEMES</a></li>
+                                                <li><a href="@Url.Action("DieuLeBaoHanh","DichVu")">ĐIỀU LỆ BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("GiaHanBaoHanh","DichVu")">GIA HẠN BẢO HÀNH</a></li>
+                                                <li><a href="@Url.Action("ThoiHanBaoHanh","DichVu")">THỜI HẠN BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">MEMES<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a href="@Url.Action("TuyenDung","TuyenDung")">TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
+                                </ul>
+                            </li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("CongNghe","CongNghe")">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="display" value="1">
+                    <button class="w3view-cart" type="submit" name="aaaa" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //banner-top -->
+<!-- banner -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <img src="~/Content/images/bluecore.jpg" width="1520" height="550" alt=" " />
+</div>
+<div class="clearfix"></div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">Công nghệ Memes Bluecore</h3>
+        <p style="text-align: justify;">
+            <font face="verdana" color="black">
+                <strong>Tìm hiểu động cơ Blue-Core của Yamaha.</strong> Với tiêu chí “Từng giọt nhiên liệu cho từng khoảnh khắc”, động cơ Blue Core là thế hệ động cơ mới nhất và hiện đại nhất của Yamaha, kết hợp hoàn hảo giữa khả năng tiết kiệm nhiên liệu vượt trội, vận hành êm ái, cùng thiết kế gọn nhẹ, và thân thiện với người sử dụng. Như các bạn cũng đã theo dõi trên Motosaigon.vn, gần đây nhất mẫu siêu xe tay ga Yamaha NVX 155 đã được hãng trang bị cả 2 công nghệ tiên tiến gồm: Blue-Core và VVA Van biến thiên.
+            </font><br />
+            <font face="verdana" color="black">
+                Động cơ Blue Core là con bài chiến lược của Yamaha trong cuộc đua với động cơ eSP của Honda, được giới thiệu từ năm 2012. Hai công nghệ này đều tập trung vào tăng cường hiệu suất đốt cháy nhiên liệu bằng việc thiết kế lại buồng đốt, giảm tổn hao động năng cùng khả năng kiểm soát mức độ nhiên liệu vào thời điểm đánh lửa.
+            </font><br />
+            <center>
+                <img src="~/Content/images/bluecore1.jpg" />
+            </center><br />
+        <p style="text-align: justify;">
+            <strong>Ưu điểm của Động cơ Blue-Core</strong><br />
+            <font face="verdana" color="black">
+                Tiết kiệm nhiên liệu: Nhờ hiệu suất đốt cháy nhiên liệu tối đa, động cơ Blue Core giúp giảm đến 50% lượng nhiên liệu tiêu thụ, giúp tiết kiệm đáng kể chi phí xăng.
+            </font><br />
+            <font face="verdana" color="black">
+                Hoạt động bền bỉ: Thiết kế tối ưu đến từng chi tiết giúp động cơ Blue Core hoạt động ổn định trong một thời gian dài mà không lo hỏng hóc, ít phải sửa chữa.
+            </font><br />
+            <font face="verdana" color="black">
+                Lướt đi nhẹ nhàng: Động cơ thế hệ mới cho cảm giác mượt mà khi tăng tốc và dễ dàng điều khiển khi di chuyển trong thành phố.
+            </font><br />
+            <font face="verdana" color="black">
+                Vận hành vượt trội: Khả năng tăng tốc mạnh mẽ đậm chất thể thao của động cơ Blue Core 155cc giúp người điều khiển thỏa sức thể hiện phong độ trên đường.
+            </font><br />
+        </p>
+        <center>
+            <video width="696" height="391" controls>
+                <source src="~/Content/images/bluecorevideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </center>
+        <p style="text-align: justify;">
+            <font face="verdana" color="black">
+                Các kỹ sư của Yamaha thiết kế lại cổng nạp và buồng đốt trên động cơ Blue-Core nhằm đảm bảo hiệu ứng xoáy lốc cho hỗn hợp không khí nhiên liệu ở dải tốc độ từ thấp đến cao. Tỷ số nén của động cơ 11:1 giúp đạt hiệu suất nhiên liệu tốt, nhờ đó, góp phần tạo ra một động cơ với vòng tua thấp và mô men xoắn cao. Ngoài ra, thiết kế buồng đốt nhỏ gọn, hình bán cầu với tiết diện bề mặt nhỏ cũng được sử dụng để tăng hiệu năng đốt cháy nhiên liệu. Thời điểm đánh lửa cũng được tính toán kỹ lưỡng theo từng địa hình di chuyển. Theo Yamaha chia sẻ với Moto Saiogn thì… với những cải tiến mới, lượng tiêu hao nhiên liệu của động cơ Blue Core được giảm tới 50% so với thế hệ động cơ trước.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/bluecore2.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <font face="verdana" color="black">
+                Với động cơ Blue Core có vòng tua máy cực thấp, Theo motosaigon được biết thì khi xe dừng lại chạy không tải, xe sẽ êm ái tới mức không cần thiết phải tắt đi. Theo thông số kỹ thuật, tại trạng thái không tải, động cơ Blue Core có thể hoạt động ở mức vòng tua máy 1.200 vòng/phút, thấp hơn đến 400 vòng so với các dòng xe hiện hành. Động cơ xe sẽ hoạt động êm ái, giảm lượng khí thải và tất nhiên là tiết kiệm nhiên liệu hơn. Yamaha chú trọng tới tối ưu hóa thiết kế cho Blue Core theo hướng giảm trọng lượng động cơ. Nhờ công nghệ đúc piston và xy lanh độc quyền DiASil, với hai thông số là đường kính, hành trình piston lần lượt là 54,2 và 57,9 mm, động cơ Blue Core nặng 32,1 kg đã bao gồm cần động cơ, nhẹ hơn thế hệ cũ hai kg.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/bluecore3.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <font face="verdana" color="black">
+                Động cơ eSP của Honda làm mát bằng dung dịch trong khi Blue Core tản nhiệt máy bằng không khí. Do đó, Yamaha  tập trung giảm thiểu ma sát giữa các chi tiết động cơ, một mặt giảm tiêu hao nhiên liệu, một mặt giảm nhiệt lượng tỏa ra khi vận hành.
+            </font><br />
+        </p>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                    <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                    <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                    <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>
+

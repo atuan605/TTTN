@@ -1,0 +1,18 @@
+﻿@if (Session["login"] != null)
+{
+    <ul>
+        <li>Xin chào @Session["login"]</li>
+        <li><a href="@Url.Action("Thoat", "DangNhap")">Thoát</a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>01657466553</li>
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:n14dccn086@student.ptithcm.edu.vn">atuan.060596@gmail.com</a></li>
+    </ul>
+}
+else
+{
+    <ul>
+        <li><a href="@Url.Action("DangNhap", "DangNhap")">ĐĂNG NHẬP <data-toggle ="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i></a></li>
+        <li><a href="@Url.Action("DangKy", "DangKy")"> ĐĂNG KÝ  <data-toggle ="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>01657466553</li>
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:n14dccn086@student.ptithcm.edu.vn">atuan.060596@gmail.com</a></li>
+    </ul>
+}

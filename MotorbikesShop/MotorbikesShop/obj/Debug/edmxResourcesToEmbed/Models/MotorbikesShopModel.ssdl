@@ -73,6 +73,8 @@
     <Property Name="SoLuongTon" Type="int" />
     <Property Name="MaNCC" Type="int" />
     <Property Name="MaNhom" Type="int" />
+    <Property Name="HinhAnh1" Type="nvarchar(max)" />
+    <Property Name="HinhAnh2" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -83,6 +85,14 @@
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TrinhChieu">
+    <Key>
+      <PropertyRef Name="MaSlider" />
+    </Key>
+    <Property Name="MaSlider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSlider" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hinhanh" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK_ChiTietDonHang_DonHang">
     <End Role="DonHang" Type="Self.DonHang" Multiplicity="1" />
@@ -153,6 +163,7 @@
     <EntitySet Name="NhomSP" EntityType="Self.NhomSP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrinhChieu" EntityType="Self.TrinhChieu" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ChiTietDonHang_DonHang" Association="Self.FK_ChiTietDonHang_DonHang">
       <End Role="DonHang" EntitySet="DonHang" />
       <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />

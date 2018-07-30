@@ -59,6 +59,8 @@
     <EntitySetMapping Name="SanPhams">
       <EntityTypeMapping TypeName="MotorbikesShopModel.SanPham">
         <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="HinhAnh2" ColumnName="HinhAnh2" />
+          <ScalarProperty Name="HinhAnh1" ColumnName="HinhAnh1" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="TenSP" ColumnName="TenSP" />
           <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
@@ -89,6 +91,15 @@
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="TenCuaHang" ColumnName="TenCuaHang" />
           <ScalarProperty Name="MaCuaHang" ColumnName="MaCuaHang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrinhChieux">
+      <EntityTypeMapping TypeName="MotorbikesShopModel.TrinhChieu">
+        <MappingFragment StoreEntitySet="TrinhChieu">
+          <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+          <ScalarProperty Name="TenSlider" ColumnName="TenSlider" />
+          <ScalarProperty Name="MaSlider" ColumnName="MaSlider" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

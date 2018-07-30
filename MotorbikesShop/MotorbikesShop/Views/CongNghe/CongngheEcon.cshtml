@@ -1,0 +1,178 @@
+﻿@{
+    ViewBag.Title = "Công nghệ - Motorbike Memes";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+<h2></h2>
+<!-- banner -->
+<div class="ban-top">
+    <div class="container">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="@Url.Action("Index","SanPhams")">TRANG CHỦ<span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("About","GioiThieu")">GIỚI THIỆU</a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM<span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="#"><img src="~/Content/images/logo.jpg" alt=" " /></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("XeMay","SanPhams")">SẢN PHẨM MEMES</a></li>
+                                                <li><a href="@Url.Action("DieuLeBaoHanh","DichVu")">ĐIỀU LỆ BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="@Url.Action("GiaHanBaoHanh","DichVu")">GIA HẠN BẢO HÀNH</a></li>
+                                                <li><a href="@Url.Action("ThoiHanBaoHanh","DichVu")">THỜI HẠN BẢO HÀNH</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="menu__item dropdown">
+                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">MEMES<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a href="@Url.Action("TuyenDung","TuyenDung")">TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
+                                </ul>
+                            </li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("CongNghe","CongNghe")">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="display" value="1">
+                    <button class="w3view-cart" type="submit" name="aaaa" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //banner-top -->
+<!-- banner -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <img src="~/Content/images/econ.png" width="1520" height="550" alt=" " />
+</div>
+<div class="clearfix"></div>
+<div class="banner_bottom_agile_info team">
+    <div class="container">
+        <h3 class="wthree_text_info">Công nghệ Memes ECON</h3>
+        <p style="text-align: justify;">
+            <font face="verdana" color="black">
+                Tại triển lãm Tokyo Motor Show 2011 diễn ra vào cuối năm ngoái, Memes đã công bố một mục tiêu đầy tham vọng, đó là đạt vị trí dẫn đầu về tiết kiệm nhiên liệu trong mọi danh mục sản phẩm trong vòng 3 năm tới. Mục tiêu đó không phải là không có căn cứ khi trong suốt thời gian qua, Honda đã không ngừng đầu tư, nghiên cứu và ứng dụng một loạt các công nghệ nâng cao hiệu suất tiêu hao nhiên liệu vào trong những sản phẩm của mình. Những mẫu xe của Memes vốn đã có tiếng về tiết kiệm nhiên liệu nay lại được trang bị những “trợ thủ” mới, chắc chắn sẽ là một thách thức không nhỏ đối với các đối thủ trong bối cảnh khó khăn toàn cầu về nguồn nhiên liệu hiện nay. Memes hầu như luôn là người dẫn đầu về tiết kiệm nhiên liệu bằng việc giới thiệu các công nghệ tiết kiệm nhiên liệu mới và thường xuyên chiếm vị trí cao nhất trong bảng xếp hạng các mẫu xe tiết kiệm nhiên liệu của EPA (Mỹ), 22 lần trong suốt 36 năm vừa qua. Những công nghệ nổi bật của Honda có thể kể đến công nghệ VTEC (tối ưu hóa thời điểm đóng mở van), công nghệ VCM (điều khiển xy-lanh biến thiên) và gần đây người ta hay nhắc đến công nghệ Hỗ trợ lái xe sinh thái, hay còn gọi tắt là Công nghệ ECON (Ecological Driving Assist System)
+                Công nghệ ECON được công bố lần đầu tiên vào năm 2008, đến năm 2010 nó đã mang lại một kết quả tiết kiệm nhiên liệu đầy ấn tượng cho mẫu xe Insight, mẫu xe được áp dụng rộng rãi đầu tiên, với khả năng cải thiện từ 10 – 20% mức tiêu hao nhiên liệu. Tiếp đó công nghệ này đã được ứng dụng trên Honda CR-Z và góp phần giúp mẫu xe này giành danh hiệu “Xe của năm” tại Mỹ năm 2010 – 2011. .
+            </font><br />
+            <strong>Từ nghiên cứu… </strong><br />
+            <font face="verdana" color="black">
+                Tháng 11 năm 2008, Memes Motor Nhật Bản đã công bố việc phát triển công nghệ Hỗ trợ lái xe sinh thái, một hệ thống có khả năng kết hợp 3 chức năng để tăng cường khả năng tiết kiệm nhiên liệu: Kiểm soát tối ưu hoạt động của hộp số vô cấp (CVT) và động cơ; hướng dẫn lái xe tiết kiệm bằng việc đưa ra các chỉ dẫn về tình trạng vận hành tiết kiệm nhiên liệu của xe theo thực tế; đánh giá khả năng tiết kiệm nhiên liệu qua những phản hồi về tình trạng vận hành hiện tại, hoặc phản hồi kết quả cộng dồn của những hành trình trước đó. Xuất phát từ nhận định cho rằng thao tác lái xe có ảnh hưởng lớn đến khả năng tiết kiệm nhiên liệu, Honda đã phát triển công nghệ ECON để tăng cường khả năng tiết kiệm nhiên liệu thông qua việc kiểm soát hộp số CVT và động cơ dựa trên điều kiện lái xe thực tế, giúp người lái có thể lái xe một cách tiết kiệm nhiên liệu hơn. Hơn nữa, việc ghi nhận khả năng tiết kiệm nhiên liệu về mặt dài hạn được thể hiện qua biểu tượng chiếc lá, biểu tượng này sẽ “mọc” nhiều hơn theo thời gian khi mà người lái trở nên thành thạo hơn trong việc lái xe tiết kiệm nhiên liệu. Việc đạt được nhiều biểu trượng chiếc lá sẽ mang lại cảm giác thú vị cho người lái và sẽ khích lệ người lái duy trì hoặc cố gắng đạt được kỹ nănglái xe tiết kiệm nhiên liệu.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/econ1.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <strong>Những đặc điểm chính của hệ thống Hỗ trợ lái xe sinh thái</strong><br />
+            <strong>1. ECON kiểm soát sự hài hòa giữa hộp số CVT và động cơ để hỗ trợ việc lái xe tiết kiệm nhiên liệu</strong><br />
+            <font face="verdana" color="black">
+                Thực hiện đầu tiên trên mẫu xe Odyssey, phương thức ECON được tối ưu hóa với việc bổ sung chức năng kiểm soát quá trình tạm dừng và khả năng khôi phục sau khi phanh, điểm đặc trưng trên xe hybrid. Ngay khi người lái ấn nút ECON, hệ thống sẽ bắt đầu vận vành và kiểm soát mức độ phù hợp giữa hộp số CVT và động cơ nhằm hỗ trợ việc lái xe tiết kiệm nhiên liệu. Thêm vào đó, trạng thái ECON sẽ tự động đạt được khả năng tiết kiệm năng lượng từ thiết bị điều hòa không khí bằng cách mở rộng thời gian tạm dừng và tăng cường việcnạp lại để khôi phục trong quá trình giảm tốc.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/econ2.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <strong>2. Chức năng hướng dẫn – cung cấp chỉ dẫn lái xe tiết kiệm nhiên liệu trong quá trình lái xe</strong><br />
+            <font face="verdana" color="black">
+                Nhằm tăng cường mức độ nhận biết của lái xe về việc lái xe tiết kiệm nhiên liệu, màu nền xung quanh số hiển thị tốc độ sẽ thông báo tới người lái tình trạng vận hành hiện tại. Khi màu nền chuyển sang màu xanh lá cây là khi đạt được khả năng tiết kiệm nhiên liệu tối ưu; Màu xanh dương là tình trạng gần mức độ tiết kiệm nhiên liệu, đạt được khi tăng tốc và giảm tốc êm ái; Và, màu xanh da trời là khi chiếc xe tiêu thụ thêm nhiên liệu với việc tăng tốc hoặc giảm tốc mạnh. Vùng màu nền giúp cho người lái nhận biết được các dải tiêu hao nhiên liệu theo thời gian thực tế và khích lệ người lái lái xe tiết kiệm nhiên liệu bằng cách cố gắng duy trì tình trạng màu xanh lá cây. Trong hệ thống hybrid của Honda, mô-tơ hoạt động trong suốt quá trình tăng tốc và sẽ khôi phục năng lượng trong quá trình phanh, do đó, việc phanh cũng có ảnh hưởng tới khả năng tiết kiệm nhiên liệu. Vùng màu nền quanh phần hiển thị tốc độ phản hồi theo khả năng tiết kiệm nhiên liệu không chỉ trong thao tác tăng tốc mà cả trong thao tác phanh.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/econ3.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <strong>3. Chức năng đánh giá – cung cấp những phản hồi về thao tác lái xe hiện tại, cũng như những phản hồi về việc theo dõi quá trình lái xe tiết kiệm nhiên liệu trong dài hạn</strong><br />
+            <font face="verdana" color="black">
+                Đi cùng với hệ thống ECON, hệ thống hiển thị đa thông tin (MID) cho phép người lái lựa chọn thông tin hiển thị, bao gồm cả chức năng đánh giá về lái xe tiết kiệm nhiên liệu, mà ở đó số lượng những biểu tượng chiếc lá sẽ tượng trưng cho mức độ vận hành tiết kiệm nhiên liệu của chiếc xe. Khi khởi động, hệ thống sẽ đánh giá tình trạng vận hành của xe. Khi kết thúc, những biểu tượng chiếc lá trên dòng hiển thị đầu tiên sẽ thể hiện đánh giá về lượt chạy gần nhất (kể từ lúc khởi động đến lúc kết thúc), trong khi thanh nằm ngang tại dòng dưới cùng sẽ hiển thị thời gian vận hành. MID cũng cho phép người lái xem những số liệu về tiết kiệm nhiên liệu của 3 hành trình gần nhất, cũng như thống kê về mức tiết kiệm nhiên liệu tức thời hoặc trung bình. Chức năng hiển thị được phát triển lần đầu tiên trên thế giới này cung cấp khả năng truy cập tức thời hoặc truy vấn lại những hành trình trong quá khứ để đánh giá mức độ ảnh hưởng của thói quen lái xe đối với việc tiết kiệm nhiên liệu. Chức năng đánh giá khuyến khích người lái quan tâm và phát triển thói quen lái xe tiết kiệm nhiên liệu về lâu dài.
+            </font><br />
+        </p>
+        <center>
+            <img src="~/Content/images/econ4.jpg" />
+        </center><br />
+        <p style="text-align: justify;">
+            <strong>Đến ứng dụng….</strong><br />
+            <font face="verdana" color="black">
+                Cho đến nay, công nghệ ECON đã được ứng dụng thành công trên các mẫu xe của Honda, khởi đầu là Honda Insight, tiếp đến là Honda CR-Z
+            </font><br />
+        </p>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                    <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                    <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                    <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>

@@ -52,7 +52,7 @@
                                     <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
                                 </ul>
                             </li>
-                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("CongNghe","CongNghe")">CÔNG NGHỆ</a></li>
                             <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
                         </ul>
                     </div>
@@ -73,92 +73,6 @@
     </div>
 </div>
 <!-- //banner-top -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body modal-body-sub_agile">
-                <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">ĐĂNG NHẬP</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Tài khoản" required="">
-                            <label>Tài khoản</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="Mật khẩu" required="">
-                            <label>Mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <input type="submit" value="Đăng nhập">
-                    </form>
-
-                    <div class="clearfix"></div>
-                    <p><a href="#" data-toggle="modal" data-target="#myModal2">Bạn chưa có tài khoản, đăng ký tại đây</a></p>
-
-                </div>
-                <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <!-- //Modal content-->
-    </div>
-</div>
-<!-- //Modal1 -->
-<!-- Modal2 -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body modal-body-sub_agile">
-                <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">ĐĂNG Ký</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Tài khoản" required="">
-                            <label>Tài khoản</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="email" name="Email" required="">
-                            <label>Email</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="password" required="">
-                            <label>Mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="Confirm Password" required="">
-                            <label>Nhập lại mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <input type="submit" value="Đăng ký">
-                    </form>
-
-                    <div class="clearfix"></div>
-                    <p><a href="#">Tôi đã đông ý các điều khoản - Nhấp vào đăng ký</a></p>
-
-                </div>
-                <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <!-- //Modal content-->
-    </div>
-</div>
 <!-- /banner_bottom_agile_info -->
 <div class="page-head_agile_info_w3l">
     <div class="container">
@@ -186,7 +100,7 @@
             </div>
             <div class="col-md-6 ab_pic_w3ls_text_info">
                 <h5>GIỚI THIỆU VỀ MEMES</h5>
-                <p>Được thành lập vào năm 1990, công ty Memes Việt Nam là liên doanh giữa Công ty Memes Motor (Nhật Bản), Công ty Asian Memes Motor (Thái Lan) và Tổng Công ty Máy Động Lực và Máy Nông nghiệp Việt Nam với ngành sản phẩm chính là xe máy. Sau hơn 20 năm có mặt tại Việt Nam, Memes Việt Nam đã không ngừng phát triển và trở thành một trong những công ty dẫn đầu trong lĩnh vực sản xuất xe gắn máy uy tín tại thị trường Việt Nam. Hiểu rõ xe máy là phương tiện đi lại quan trọng và chủ yếu tại Việt Nam, Memes Việt Nam luôn nỗ lực hết mình cung cấp cho khách hàng những sản phẩm xe máy có chất lượng cao nhất với giá cả hợp lý được sản xuất từ những nhà máy thân thiện với môi trường.</p>
+                <p style="text-align: justify;">Được thành lập vào năm 1990, công ty Memes Việt Nam là liên doanh giữa Công ty Memes Motor (Nhật Bản), Công ty Asian Memes Motor (Thái Lan) và Tổng Công ty Máy Động Lực và Máy Nông nghiệp Việt Nam với ngành sản phẩm chính là xe máy. Sau hơn 20 năm có mặt tại Việt Nam, Memes Việt Nam đã không ngừng phát triển và trở thành một trong những công ty dẫn đầu trong lĩnh vực sản xuất xe gắn máy uy tín tại thị trường Việt Nam. Hiểu rõ xe máy là phương tiện đi lại quan trọng và chủ yếu tại Việt Nam, Memes Việt Nam luôn nỗ lực hết mình cung cấp cho khách hàng những sản phẩm xe máy có chất lượng cao nhất với giá cả hợp lý được sản xuất từ những nhà máy thân thiện với môi trường.</p>
 
                 <div class="clearfix"></div>
             </div>
@@ -349,8 +263,8 @@
         </div>
         <div class="col-md-6 agileits_schedule_bottom_right">
             <div class="w3ls_schedule_bottom_right_grid">
-                <h3>Lớn mạnh bằng sự theo đuổi tư duy chất lượng</h3>
-                <p>
+                <h3 style="text-align: justify;">Lớn mạnh bằng sự theo đuổi tư duy chất lượng</h3>
+                <p style="text-align: justify;">
                     Mang lại những sản phẩm và dịch vụ lý tưởng để đáp ứng được nhu cầu của từng cá nhân và kì vọng của xã hội.
                     Dẫn đầu sự phát triển xã hội và hoàn thành sứ mệnh nâng cao chất lượng cuộc sống.
                     Mang lại “cuộc sống tự do, an toàn và thoải mái”, nhân rộng niềm vui của tất cả mọi người.
@@ -366,13 +280,11 @@
     <!-- banner-bootom-w3-agileits -->
     <div class="banner-bootom-w3-agileits">
         <div class="container">
-            <h3 class="wthree_text_info">TRIẾT LÝ MEMES</span></h3>
-
+            <h3 class="wthree_text_info">TRIẾT LÝ MEMES</h3>
             <div class="agile_last_double_sectionw3ls">
                 <div class="agile_last_double_sectionw3ls">
                     <div class="col-md-6 multi-gd-img multi-gd-text ">
                         <a href="#"><img src="~/Content/images/banhang.jpg" alt=" "><h4></h4></a>
-
                     </div>
                     <div class="col-md-6 multi-gd-img multi-gd-text ">
                         <a href="#"><img src="~/Content/images/muahang.jpg" alt=" "><h4></h4></a>

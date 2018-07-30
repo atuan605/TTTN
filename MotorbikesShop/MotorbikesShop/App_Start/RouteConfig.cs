@@ -18,6 +18,16 @@ namespace MotorbikesShop
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "DangKy",
+                url: "dang-ky",
+                defaults: new { controller = "LoginUser", action = "DangKy", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "TimKiem",
+                url: "tim-kiem",
+                defaults: new { controller = "SanPhams", action = "TimKiem", id = UrlParameter.Optional }
+            );
         }
     }
 }

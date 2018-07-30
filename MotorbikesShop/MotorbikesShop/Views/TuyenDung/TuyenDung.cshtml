@@ -52,7 +52,7 @@
                                     <li><a href="@Url.Action("CuaHang","CuaHangs")">CỬA HÀNG ỦY NHIỆM</a></li>
                                 </ul>
                             </li>
-                            <li class=" menu__item"><a class="menu__link" href="#">CÔNG NGHỆ</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="@Url.Action("CongNghe","CongNghe")">CÔNG NGHỆ</a></li>
                             <li class=" menu__item"><a class="menu__link" href="@Url.Action("Contact","LienHe")">LIÊN HỆ</a></li>
 
                         </ul>
@@ -74,92 +74,6 @@
     </div>
 </div>
 <!-- //banner-top -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body modal-body-sub_agile">
-                <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">ĐĂNG NHẬP</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Tài khoản" required="">
-                            <label>Tài khoản</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="Mật khẩu" required="">
-                            <label>Mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <input type="submit" value="Đăng nhập">
-                    </form>
-
-                    <div class="clearfix"></div>
-                    <p><a href="#" data-toggle="modal" data-target="#myModal2">Bạn chưa có tài khoản, đăng ký tại đây</a></p>
-
-                </div>
-                <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <!-- //Modal content-->
-    </div>
-</div>
-<!-- //Modal1 -->
-<!-- Modal2 -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body modal-body-sub_agile">
-                <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">ĐĂNG Ký</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Tài khoản" required="">
-                            <label>Tài khoản</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="email" name="Email" required="">
-                            <label>Email</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="password" required="">
-                            <label>Mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <div class="styled-input">
-                            <input type="password" name="Confirm Password" required="">
-                            <label>Nhập lại mật khẩu</label>
-                            <span></span>
-                        </div>
-                        <input type="submit" value="Đăng ký">
-                    </form>
-
-                    <div class="clearfix"></div>
-                    <p><a href="#">Tôi đã đông ý các điều khoản - Nhấp vào đăng ký</a></p>
-
-                </div>
-                <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="~/Content/Login/images/login1.jpg" alt=" " />
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <!-- //Modal content-->
-    </div>
-</div>
 <!-- banner -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <img src="~/Content/images/tuyendung.jpg" width="1520" height="550" alt=" " />
@@ -168,7 +82,7 @@
 <div class="banner_bottom_agile_info team">
     <div class="container">
         <h3 class="wthree_text_info">THÔNG ĐIỆP TUYỂN DỤNG</h3>
-        <p>
+        <p style="text-align: justify;">
             <strong>Nồng nhiệt chào đón bạn ghé thăm Website của Công ty Yamaha Motor Việt Nam và ghé thăm trang tuyển dụng của chúng tôi!</strong><br /><br />
             Từ khi thành lập công ty Memes Việt Nam (MVN) đến nay đã được gần 30 năm và cùng với chặng đường phát triển của công ty, số lượng cán bộ công nhân viên làm việc tại MVN đã tăng lên không ngừng, từ 100 lên 200, từ 1000 lên 2000 … Và hiện tại, chúng tôi có 10.000 cán bộ công nhân viên tại cả 3 miền đất nước đang làm việc hết mình cho thương hiệu Memes tại Việt Nam.<br /><br />
             Bạn hãy dành thời gian tìm hiểu Chính sách tuyển dụng của chúng tôi, qua đó bạn biết được định hướng của chúng tôi trong công tác chiêu mộ nhân tài cũng như các tiêu chí chung nhất mà Memes mong đợi ở các ứng viên của mình. Bạn cũng đừng bỏ qua cơ hội tìm hiểu về môi trường làm việc, văn hóa con người và chế độ chính sách… của Yamaha được khắc họa phần nào qua nội dung giới thiệu về công ty cũng như Thư viện ảnh minh họa.<br /><br />

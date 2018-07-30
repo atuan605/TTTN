@@ -74,6 +74,8 @@
     <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK_ChiTietDonHang_SanPham" FromRole="SanPham" ToRole="ChiTietDonHang" />
     <NavigationProperty Name="NhaCungCap" Relationship="Self.FK_SanPham_NhaCungCap" FromRole="SanPham" ToRole="NhaCungCap" />
     <NavigationProperty Name="NhomSP" Relationship="Self.FK_SanPham_NhomSP" FromRole="SanPham" ToRole="NhomSP" />
+    <Property Name="HinhAnh1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -174,6 +176,7 @@
       <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
     <EntitySet Name="CuaHangs" EntityType="MotorbikesShopModel.CuaHang" />
+    <EntitySet Name="TrinhChieux" EntityType="MotorbikesShopModel.TrinhChieu" />
   </EntityContainer>
   <EntityType Name="CuaHang">
     <Key>
@@ -183,5 +186,13 @@
     <Property Name="TenCuaHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="SoDienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TrinhChieu">
+    <Key>
+      <PropertyRef Name="MaSlider" />
+    </Key>
+    <Property Name="MaSlider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSlider" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Hinhanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

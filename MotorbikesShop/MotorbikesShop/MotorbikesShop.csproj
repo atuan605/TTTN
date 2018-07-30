@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -156,12 +162,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CongNgheController.cs" />
     <Compile Include="Controllers\CuaHangsController.cs" />
+    <Compile Include="Controllers\DangKyController.cs" />
+    <Compile Include="Controllers\DangNhapController.cs" />
     <Compile Include="Controllers\DichVuController.cs" />
     <Compile Include="Controllers\GioiThieuController.cs" />
-    <Compile Include="Controllers\KhachHangsController.cs" />
     <Compile Include="Controllers\LienHeController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\TuyenDungController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +187,7 @@
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>MotorbikesShopModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\MotorbikesShopModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,46 +215,39 @@
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>MotorbikesShopModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TrinhChieu.cs">
+      <DependentUpon>MotorbikesShopModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\bluecore.jpg" />
+    <Content Include="Content\images\bluecore1.jpg" />
+    <Content Include="Content\images\bluecore2.jpg" />
+    <Content Include="Content\images\bluecore3.jpg" />
+    <Content Include="Content\images\bluecorevideo.mp4" />
     <Content Include="Content\images\chinhsach.jpg" />
     <Content Include="Content\images\dichvu.jpg" />
+    <Content Include="Content\images\econ.png" />
+    <Content Include="Content\images\econ1.jpg" />
+    <Content Include="Content\images\econ2.jpg" />
+    <Content Include="Content\images\econ3.jpg" />
+    <Content Include="Content\images\econ4.jpg" />
     <Content Include="Content\images\quytrinh.jpg" />
     <Content Include="Content\images\sanpham1.jpg" />
     <Content Include="Content\images\td.jpg" />
     <Content Include="Content\images\tuyendung.jpg" />
     <Content Include="Content\images\video.jpg" />
-    <Content Include="Content\Login\css\main.css" />
-    <Content Include="Content\Login\css\util.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
-    <Content Include="Content\Login\fonts\montserrat\OFL.txt" />
-    <Content Include="Content\Login\images\icons\favicon.ico" />
-    <Content Include="Content\Login\images\login1.jpg" />
-    <Content Include="Content\Login\js\main.js" />
-    <Content Include="Content\Login\vendor\animate\animate.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\popper.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\popper.min.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\tooltip.js" />
-    <Content Include="Content\Login\vendor\css-hamburgers\hamburgers.css" />
-    <Content Include="Content\Login\vendor\css-hamburgers\hamburgers.min.css" />
-    <Content Include="Content\Login\vendor\jquery\jquery-3.2.1.min.js" />
-    <Content Include="Content\Login\vendor\select2\select2.css" />
-    <Content Include="Content\Login\vendor\select2\select2.js" />
-    <Content Include="Content\Login\vendor\select2\select2.min.css" />
-    <Content Include="Content\Login\vendor\select2\select2.min.js" />
-    <Content Include="Content\Login\vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="Content\Login\css\popuo-box.css" />
+    <Content Include="Content\Login\css\style.css" />
+    <Content Include="Content\Login\images\b2.jpeg" />
+    <Content Include="Content\Login\images\e-mail.png" />
+    <Content Include="Content\Login\images\password.png" />
+    <Content Include="Content\Login\images\tick.png" />
+    <Content Include="Content\Login\images\user.png" />
+    <Content Include="Content\Login\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\Login\js\jquery.magnific-popup.js" />
+    <Content Include="Content\UserCss\PagedList.css" />
     <Content Include="Content\UserCss\bootstrap.css" />
     <Content Include="Content\UserCss\bootstrap.min.css" />
     <Content Include="Content\UserCss\easy-responsive-tabs.css" />
@@ -326,6 +329,102 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HinhAnhSP1\001.1.png" />
+    <Content Include="HinhAnhSP1\002.1.jpg" />
+    <Content Include="HinhAnhSP1\003.1.png" />
+    <Content Include="HinhAnhSP1\004.1.png" />
+    <Content Include="HinhAnhSP1\005.1.png" />
+    <Content Include="HinhAnhSP1\006.1.jpg" />
+    <Content Include="HinhAnhSP1\007.1.jpg" />
+    <Content Include="HinhAnhSP1\008.1.jpg" />
+    <Content Include="HinhAnhSP1\009.1.jpg" />
+    <Content Include="HinhAnhSP1\010.1.png" />
+    <Content Include="HinhAnhSP1\011.1.jpg" />
+    <Content Include="HinhAnhSP1\012.1.jpg" />
+    <Content Include="HinhAnhSP1\013.1.jpg" />
+    <Content Include="HinhAnhSP1\014.1.jpg" />
+    <Content Include="HinhAnhSP1\015.1.jpg" />
+    <Content Include="HinhAnhSP1\016.1.jpg" />
+    <Content Include="HinhAnhSP1\017.1.png" />
+    <Content Include="HinhAnhSP1\018.1.jpg" />
+    <Content Include="HinhAnhSP1\019.1.png" />
+    <Content Include="HinhAnhSP1\020.1.png" />
+    <Content Include="HinhAnhSP1\021.1.png" />
+    <Content Include="HinhAnhSP1\022.1.png" />
+    <Content Include="HinhAnhSP1\023.1.png" />
+    <Content Include="HinhAnhSP1\024.1.png" />
+    <Content Include="HinhAnhSP1\025.1.jpg" />
+    <Content Include="HinhAnhSP1\026.1.jpg" />
+    <Content Include="HinhAnhSP1\027.1.png" />
+    <Content Include="HinhAnhSP1\028.1.jpg" />
+    <Content Include="HinhAnhSP1\029.1.jpg" />
+    <Content Include="HinhAnhSP1\030.1.jpg" />
+    <Content Include="HinhAnhSP1\031.1.jpg" />
+    <Content Include="HinhAnhSP1\032.1.jpg" />
+    <Content Include="HinhAnhSP1\033.1.jpg" />
+    <Content Include="HinhAnhSP1\034.1.jpg" />
+    <Content Include="HinhAnhSP1\035.1.png" />
+    <Content Include="HinhAnhSP1\036.1.png" />
+    <Content Include="HinhAnhSP1\037.1.jpg" />
+    <Content Include="HinhAnhSP1\038.1.jpg" />
+    <Content Include="HinhAnhSP1\039.1.jpg" />
+    <Content Include="HinhAnhSP1\040.1.jpg" />
+    <Content Include="HinhAnhSP1\041.1.jpg" />
+    <Content Include="HinhAnhSP1\042.1.png" />
+    <Content Include="HinhAnhSP1\044.1.jpg" />
+    <Content Include="HinhAnhSP1\045.1.jpg" />
+    <Content Include="HinhAnhSP1\046.1.jpg" />
+    <Content Include="HinhAnhSP1\047.1.jpg" />
+    <Content Include="HinhAnhSP1\048.1.jpg" />
+    <Content Include="HinhAnhSP1\43.1.jpg" />
+    <Content Include="HinhAnhSP2\001.2.png" />
+    <Content Include="HinhAnhSP2\002.2.jpg" />
+    <Content Include="HinhAnhSP2\003.2.png" />
+    <Content Include="HinhAnhSP2\004.2.png" />
+    <Content Include="HinhAnhSP2\005.2.png" />
+    <Content Include="HinhAnhSP2\006.2.jpg" />
+    <Content Include="HinhAnhSP2\007.2.jpg" />
+    <Content Include="HinhAnhSP2\008.2.jpg" />
+    <Content Include="HinhAnhSP2\009.2.jpg" />
+    <Content Include="HinhAnhSP2\010.2.png" />
+    <Content Include="HinhAnhSP2\011.2.jpg" />
+    <Content Include="HinhAnhSP2\012.2.jpg" />
+    <Content Include="HinhAnhSP2\013.2.jpg" />
+    <Content Include="HinhAnhSP2\014.2.jpg" />
+    <Content Include="HinhAnhSP2\015.2.jpg" />
+    <Content Include="HinhAnhSP2\016.2.jpg" />
+    <Content Include="HinhAnhSP2\017.2.png" />
+    <Content Include="HinhAnhSP2\018.2.jpg" />
+    <Content Include="HinhAnhSP2\019.2.png" />
+    <Content Include="HinhAnhSP2\020.2.png" />
+    <Content Include="HinhAnhSP2\021.2.jpg" />
+    <Content Include="HinhAnhSP2\022.2.png" />
+    <Content Include="HinhAnhSP2\023.2.png" />
+    <Content Include="HinhAnhSP2\024.2.png" />
+    <Content Include="HinhAnhSP2\025.2.jpg" />
+    <Content Include="HinhAnhSP2\026.2.jpg" />
+    <Content Include="HinhAnhSP2\027.2.jpg" />
+    <Content Include="HinhAnhSP2\028.2.jpeg" />
+    <Content Include="HinhAnhSP2\029.2.jpg" />
+    <Content Include="HinhAnhSP2\030.2.jpg" />
+    <Content Include="HinhAnhSP2\031.2.jpg" />
+    <Content Include="HinhAnhSP2\032.2.jpg" />
+    <Content Include="HinhAnhSP2\033.2.jpg" />
+    <Content Include="HinhAnhSP2\034.2.jpg" />
+    <Content Include="HinhAnhSP2\035.2.png" />
+    <Content Include="HinhAnhSP2\036.2.jpg" />
+    <Content Include="HinhAnhSP2\037.2.jpg" />
+    <Content Include="HinhAnhSP2\038.2.jpg" />
+    <Content Include="HinhAnhSP2\039.2.jpg" />
+    <Content Include="HinhAnhSP2\040.2.jpg" />
+    <Content Include="HinhAnhSP2\041.2.jpg" />
+    <Content Include="HinhAnhSP2\042.2.png" />
+    <Content Include="HinhAnhSP2\043.2.jpg" />
+    <Content Include="HinhAnhSP2\044.2.jpg" />
+    <Content Include="HinhAnhSP2\045.2.jpg" />
+    <Content Include="HinhAnhSP2\046.2.jpg" />
+    <Content Include="HinhAnhSP2\047.2.jpg" />
+    <Content Include="HinhAnhSP2\048.2.jpg" />
     <Content Include="HinhAnhSP\001.png" />
     <Content Include="HinhAnhSP\002.png" />
     <Content Include="HinhAnhSP\003.png" />
@@ -405,81 +504,6 @@
     <Content Include="Models\MotorbikesShopModel.edmx.diagram">
       <DependentUpon>MotorbikesShopModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\animated.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\core.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\icons.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\larger.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\list.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\mixins.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\path.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\stacked.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\less\variables.less" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_core.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_list.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_path.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Black.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-BlackItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Bold.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-BoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-ExtraBold.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-ExtraLight.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Italic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Light.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-LightItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Medium.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-MediumItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Regular.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-SemiBold.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-Thin.ttf" />
-    <Content Include="Content\Login\fonts\montserrat\Montserrat-ThinItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Black.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-BlackItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Bold.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-BoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-ExtraBold.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-ExtraLight.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Italic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Light.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-LightItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Medium.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-MediumItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Regular.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-SemiBold.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-Thin.ttf" />
-    <Content Include="Content\Login\fonts\poppins\Poppins-ThinItalic.ttf" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -501,7 +525,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Layout\UserLayout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\SanPhams\Create.cshtml" />
     <Content Include="Views\SanPhams\Delete.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
@@ -521,15 +544,18 @@
     <Content Include="Views\DichVu\DieuLeBaoHanh.cshtml" />
     <Content Include="Views\DichVu\ThoiHanBaoHanh.cshtml" />
     <Content Include="Views\TuyenDung\TuyenDung.cshtml" />
-    <Content Include="Views\KhachHangs\Create.cshtml" />
-    <Content Include="Views\KhachHangs\Delete.cshtml" />
-    <Content Include="Views\KhachHangs\Details.cshtml" />
-    <Content Include="Views\KhachHangs\Edit.cshtml" />
-    <Content Include="Views\KhachHangs\Index.cshtml" />
-    <Content Include="Views\KhachHangs\DangNhap.cshtml" />
+    <Content Include="Views\CongNghe\CongNghe.cshtml" />
+    <Content Include="Views\CongNghe\CongngheEcon.cshtml" />
+    <Content Include="Views\CongNghe\CongNgheBluecore.cshtml" />
+    <Content Include="Views\TimKiem\KetQuaTimKiem.cshtml" />
+    <Content Include="Views\DangKy\DangKy.cshtml" />
+    <Content Include="Views\TimKiem\KhongSP.cshtml" />
+    <Content Include="Views\SanPhams\LoginPartial.cshtml" />
+    <Content Include="Views\DangNhap\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -33,5 +33,6 @@ namespace MotorbikesShop.Models
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<CuaHang> CuaHangs { get; set; }
+        public virtual DbSet<TrinhChieu> TrinhChieux { get; set; }
     }
 }

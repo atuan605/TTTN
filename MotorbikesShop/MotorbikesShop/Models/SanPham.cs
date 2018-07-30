@@ -29,6 +29,8 @@ namespace MotorbikesShop.Models
         public Nullable<int> SoLuongTon { get; set; }
         public Nullable<int> MaNCC { get; set; }
         public Nullable<int> MaNhom { get; set; }
+        public string HinhAnh1 { get; set; }
+        public string HinhAnh2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }

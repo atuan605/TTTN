@@ -1,0 +1,47 @@
+﻿@model MotorbikesShop.Models.KhachHang
+@{
+    ViewBag.Title = "Đăng nhập - Motorbike Memes";
+}
+<!-- Meta-Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Meta-Tags -->
+
+<link href="~/Content/Login/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- Style -->
+<link rel="stylesheet" href="~/Content/Login/css/style.css" type="text/css" media="all">
+
+<!-- Fonts -->
+<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<!-- //Fonts -->
+@using (Html.BeginForm())
+
+{
+    @Html.ValidationSummary(true)
+
+    <h1>MEMES - ĐĂNG NHẬP</h1>
+    <div class="w3layoutscontaineragileits">
+        <form action="#" method="post">
+            @if (ViewBag.ms == null)
+            {
+                <div class="alert alert-success">
+                    @ViewBag.ms
+                </div>
+            }
+            <input type="text" Name="Username" placeholder="Tài khoản" required="">
+            <input type="password" Name="Password" placeholder="Mật khẩu" required="">
+            <div class="aitssendbuttonw3ls">
+                <input type="submit" value="Đăng nhập">
+                <p> Bạn chưa có tài khoản <span>→</span> <a class="w3_play_icon1" href="@Url.Action("DangKy","DangKy")">Nhấp vào đây</a></p>
+                <div class="clear"></div>
+            </div>
+        </form>
+	</div>
+    <div class="w3footeragile">
+        <p>© 2015. Copyright by Motorbike Memes <a href="" target="_blank"></a></p>
+    </div>
+}
+
