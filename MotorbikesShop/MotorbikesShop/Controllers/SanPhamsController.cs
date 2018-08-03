@@ -14,7 +14,7 @@ namespace MotorbikesShop.Controllers
     {
         private MotorbikesShopEntities db = new MotorbikesShopEntities();
 
-        // GET: SanPhams
+        //GET: SanPhams
         public ActionResult Index()
         {
             var sanPhams = db.SanPhams.Include(s => s.NhaCungCap).Include(s => s.NhomSP);

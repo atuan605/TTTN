@@ -1,7 +1,5 @@
 ﻿@using MotorbikesShop.Models;
 @model IEnumerable<MotorbikesShop.Models.SanPham>
-
-
 @{
     ViewBag.Title = "Sản phẩm - Motorbike Memes";
     Layout = "~/Views/Layout/UserLayout.cshtml";
@@ -79,6 +77,22 @@
 </div>
 <!-- //banner-top -->
 <!-- banner-bootom-w3-agileits -->
+<div class="page-head_agile_info_w3l">
+    <div class="container">
+        <h3>SẢN PHẨM CỦA MEMES</h3>
+        <!--/w3_short-->
+        <div class="services-breadcrumb">
+            <div class="agile_inner_breadcrumb">
+
+                <ul class="w3_short">
+                    <li><a href="@Url.Action("Index","SanPhams")">TRANG CHỦ</a><i>|</i></li>
+                    <li>PHỤ TÙNG</li>
+                </ul>
+            </div>
+        </div>
+        <!--//w3_short-->
+    </div>
+</div>
 <div class="banner-bootom-w3-agileits">
     <div class="container">
         <!-- mens -->
@@ -96,8 +110,6 @@
             </div>
             <div class="clearfix"></div>
         </div>
-
-
         @*<div class="sort-grid">
                 <div class="sorting">
                     <h6>Sắp xếp theo</h6>
@@ -146,14 +158,11 @@
                                         <a href="single.html" class="link-product-add-cart">Xem chi tiết</a>
                                     </div>
                                 </div>
-
-
                             </div>
                             <div class="item-info-product ">
                                 <h4><a href="single.html">@item.TenSP</a></h4>
                                 <div class="info-product-price">
                                     <span class="item_price">Giá từ @item.GiaBan VNĐ</span>
-
                                 </div>
                                 <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                                     <form action="#" method="post">
@@ -171,66 +180,59 @@
                                         </fieldset>
                                     </form>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 }
             }
-
-
             <div class="clearfix"></div>
         </div>
-
     </div>
-    <!-- //mens -->
-    <!--/grids-->
-    <!--/grids-->
-    <div class="coupons">
-        <div class="coupons-grids text-center">
-            <div class="w3layouts_mail_grid">
-                <div class="col-md-3 w3layouts_mail_grid_left">
-                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                        <i class="fa fa-truck" aria-hidden="true"></i>
-                    </div>
-                    <div class="w3layouts_mail_grid_left2">
-                        <h3>GIAO HÀNG MIỄN PHÍ</h3>
-                        <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
-                    </div>
+</div>
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-3 w3layouts_mail_grid_left">
-                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                        <i class="fa fa-headphones" aria-hidden="true"></i>
-                    </div>
-                    <div class="w3layouts_mail_grid_left2">
-                        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-                        <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
-                    </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>GIAO HÀNG MIỄN PHÍ</h3>
+                    <p>Vận chuyển miễn phí tại tất cả các đơn hàng </p>
                 </div>
-                <div class="col-md-3 w3layouts_mail_grid_left">
-                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                    </div>
-                    <div class="w3layouts_mail_grid_left2">
-                        <h3>BẢO HÀNH - BẢO TRÌ</h3>
-                        <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 w3layouts_mail_grid_left">
-                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                        <i class="fa fa-gift" aria-hidden="true"></i>
-                    </div>
-                    <div class="w3layouts_mail_grid_left2">
-                        <h3>HỖ TRỢ BỒI THƯỜNG</h3>
-                        <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
             </div>
-
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <p>Bộ phận chăm sóc khách hàng & giải quyết khiếu nại chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>BẢO HÀNH - BẢO TRÌ</h3>
+                    <p>Dịch vụ bảo hành, bảo dưỡng chuyên nghiệp.</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>HỖ TRỢ BỒI THƯỜNG</h3>
+                    <p>Khi xe của quý khách gặp sự cố, sẽ được cửa hàng hỗ trợ tiền bồi thường</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
         </div>
+
     </div>
-    <!--grids-->
+</div>
 
 
 

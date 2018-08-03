@@ -1,7 +1,5 @@
 ﻿@using MotorbikesShop.Models;
 @model IEnumerable<MotorbikesShop.Models.SanPham>
-
-
 @{
     ViewBag.Title = "Sản phẩm - Motorbike Memes";
     Layout = "~/Views/Layout/UserLayout.cshtml";
@@ -79,6 +77,22 @@
 </div>
 <!-- //banner-top -->
 <!-- banner-bootom-w3-agileits -->
+<div class="page-head_agile_info_w3l">
+    <div class="container">
+        <h3>SẢN PHẨM CỦA MEMES</h3>
+        <!--/w3_short-->
+        <div class="services-breadcrumb">
+            <div class="agile_inner_breadcrumb">
+
+                <ul class="w3_short">
+                    <li><a href="@Url.Action("Index","SanPhams")">TRANG CHỦ</a><i>|</i></li>
+                    <li>SẢN PHẨM</li>
+                </ul>
+            </div>
+        </div>
+        <!--//w3_short-->
+    </div>
+</div>
 <div class="banner-bootom-w3-agileits">
     <div class="container">
         <!-- mens -->
@@ -96,30 +110,28 @@
             </div>
             <div class="clearfix"></div>
         </div>
-
-
         @*<div class="sort-grid">
-                <div class="sorting">
-                    <h6>Sắp xếp theo</h6>
-                    <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                        <option value="null">Mặc định</option>
-                        <option value="null">Theo tên(A - Z)</option>
-                        <option value="null">The tên(Z - A)</option>
-                        <option value="null">Theo giá(Thấp - Cao)</option>
-                        <option value="null">Theo giá(Cao - Thấp)</option>
-                    </select>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="sorting">
-                    <h6>Hiển thị</h6>
-                    <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
-                        <option value="null">12</option>
-                        <option value="null">24</option>
-                    </select>
-                    <div class="clearfix"></div>
-                </div>
+            <div class="sorting">
+                <h6>Sắp xếp theo</h6>
+                <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                    <option value="null">Mặc định</option>
+                    <option value="null">Theo tên(A - Z)</option>
+                    <option value="null">The tên(Z - A)</option>
+                    <option value="null">Theo giá(Thấp - Cao)</option>
+                    <option value="null">Theo giá(Cao - Thấp)</option>
+                </select>
                 <div class="clearfix"></div>
-            </div>*@
+            </div>
+            <div class="sorting">
+                <h6>Hiển thị</h6>
+                <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
+                    <option value="null">12</option>
+                    <option value="null">24</option>
+                </select>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>*@
         <div class="men-wear-bottom">
             <div class="col-sm-4 men-wear-left">
                 <img class="img-responsive" src="~/Content/images/sanpham1.jpg" alt=" " />
@@ -155,7 +167,9 @@
                             </div>
                         </div>
                     </div>
-                }else{
+                }
+                else
+                {
                     <div class="col-md-3 product-men">
                         <div class="men-pro-item simpleCart_shelfItem">
                             <div class="men-thumb-item">
@@ -188,20 +202,15 @@
                                         </fieldset>
                                     </form>
                                 </div>
-
                             </div>
                         </div>
-                    </div>          
+                    </div>
                 }
-
-
             }
             <div class="clearfix"></div>
         </div>
     </div>
-    <!-- //mens -->
-    <!--/grids-->
-    <!--/grids-->
+</div>
     <div class="coupons">
         <div class="coupons-grids text-center">
             <div class="w3layouts_mail_grid">
@@ -246,7 +255,6 @@
 
         </div>
     </div>
-    <!--grids-->
 
 
 
